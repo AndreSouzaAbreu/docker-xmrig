@@ -1,0 +1,11 @@
+version: "2.0"
+services:
+  xmr-miner:
+    container_name: xmr-miner
+    image: miner
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    user: miner
+    restart: unless-stopped
+    command: ["--user=${WALLET}", "--url=${POOL}", "--pass=${WORKER_NAME}", "--keepalive"]
