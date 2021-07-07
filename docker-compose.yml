@@ -9,5 +9,5 @@ services:
     user: miner
     restart: unless-stopped
     command: ["--user=${WALLET}", "--url=${POOL}", "--pass=${WORKER_NAME}", "--keepalive"]
-    cpus: 3
-    mem_limit: 2000000000
+    # cpus: 2 # cpu limit
+    # mem_limit: 2000000000 # RAM limit
